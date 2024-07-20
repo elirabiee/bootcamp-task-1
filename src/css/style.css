@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+}
+:root{
+    --color-date:#696969;
+    --color-headings:#1E1E1E;
+    --color-white:#FFFFFF;
+    --color-button:#219F95;
+    --color-title:#234894;
+    --color-title-number:#AFCEDD;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    color: var(--color-body);
+    font-size:1.4rem;
+    line-height: 1.7;
+}
+h1,
+h2,
+h3{
+color: var(--color-headings);
+font-weight: 700;
+}
+h1{
+    font-size: 2.2rem;
+    margin-bottom: 7rem;
+    padding-right: 2rem;
+}
+h2{
+    font-size: 1.8rem;
+    /* margin-bottom: 1.5rem; */
+}
+
+/* button */
+.btn{
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    border: none;
+    width: 150px;
+    height: 64px;
+    cursor: pointer;
+}
+.btn--member{
+    margin-right: 2rem;
+}
+/* title */
+.title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* justify-content:space-evenly; */
+}
+.title__num{
+    font-size: 1.8rem;
+    background-color: var(--color-title-number);
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    /* margin-right: 3rem; */
+    color: var(--color-title);
+    display: inline-block;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.title__text{
+    font-size: 1.6rem;
+    color: var(--color-title);
+}
+.title__date{
+    color: var(--color-date);
+    width: 140px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+.membership__num{
+    width: 140px;
+    font-size: 1.2rem;
+    color: var(--color-date);
+}
+.membership__request{
+    margin-top: 1rem;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    
+}
+.detail__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
+/* container */
+.container{
+    /* background-color: tomato; */
+    /* max-width: 800px;    */
+    display: grid;
+    /* gap: 1rem ; */
+    row-gap: 5rem;
+    grid-template-columns: repeat(1,1fr);
+    padding-right: 2rem;
+
+}
+.container__request{
+    /* background-color: gold; */
+    width: 300px;
+}
+@media screen and (min-width:726px) {
+    .container{
+    grid-template-columns: repeat(2,1fr);
+
+    }
+    
+}
+@media screen and (min-width:1024px) {
+    .container{
+    grid-template-columns: repeat(3,1fr);
+
+    }
+    
+}
